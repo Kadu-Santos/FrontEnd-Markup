@@ -1,0 +1,206 @@
+/*Barra de navegação*/
+
+.img_login{
+    width: 40px;
+    margin: 10px;
+}
+
+.nav-item a{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+header{
+    background-color: rgb(35, 83, 144);
+}
+
+/*Botões*/
+
+.botao{
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+#lgin{
+    background-color: #235390;
+    border: solid #042856;
+}
+
+#comeca{
+    background-color: #61E002;
+    border: solid #61B800;
+    border-top: 2px;
+}
+
+/*Corpo*/
+.textHome{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-top: 20px;
+    text-shadow: 1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(19, 19, 19);
+    padding: 20px;
+    font-size: 20px;
+}
+
+#textLogo{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Questrial', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 60pt;
+    text-shadow: 1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(19, 19, 19);
+}
+
+#body{
+    background: url(../images/test2.png) repeat; 
+}
+
+#cont{
+    height: 100%;
+    min-height: 90vh;
+    justify-content: center;
+}
+
+/*apresentacao*/
+
+.apresentacao{
+    background-color: white;
+}
+
+.txt-title{
+    text-align: center;
+    margin-top: 35px;
+    color: rgb(60, 142, 250);
+}
+
+.txt-title h3{
+    font-size: 30px;
+}
+
+#descricao{
+    margin:25px;
+    text-align: justify;
+}
+
+.imgDesc{
+    width: 85%;
+    margin: auto;
+}
+
+/*Rodapé*/
+
+.rodp{
+    background-color: rgb(230, 240, 255);
+    color: rgb(10, 88, 202);
+}
+
+/*Modal de login*/
+#modalLoginContent{
+    width: 95%;
+    margin: auto;
+}
+
+#ccmessage{
+    height: 15px;
+    padding-left: 10px;
+}
+
+#lmessage{
+    height: 15px;
+    padding-left: 10px;
+}
+
+#modalLogin .modal-dialog{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalCria .modal-dialog{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Ajustes para telas Maiores*/
+@media screen and (min-width: 992px){
+
+	.textHome{
+        font-size: 32px;
+    }
+
+    .botao{
+        width: 430px;
+        height: 60px;
+    }
+
+    .box-bt{
+        margin-top: 100px;
+    }
+
+    #logo{
+        width: 100%;
+    }
+
+    #cont{
+        margin-bottom: 100px;
+        min-height: 83vh;
+    }
+
+    .txt-title h3{
+        font-size: 50px;
+    }
+
+    .txt-title{
+        margin-top: 50px;
+    }
+
+    .imgDesc{
+        width: 100%;
+    }
+
+    #descricao{
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+    
+    #textLogo{
+        font-size: 80pt;
+        margin-top: 70px;
+
+        display: flex;
+        height: 100%;
+        justify-content: center;
+    }
+
+    
+    #modalLogin .modal-dialog{
+        width: 500px;
+    }
+
+    #modalCria .modal-dialog{
+        width: 500px;
+    }
+
+}

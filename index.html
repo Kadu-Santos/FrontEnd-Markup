@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Markup</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style_apresenta.css">
+
+    <!-- Icones Bootstrap -->
+    <link rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+        crossorigin="anonymous"
+    >
+
+</head>
+
+<body id="body">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <img class="img_login" src="images/person_circle.svg" alt="logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#01">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#02">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#03">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Modal login --->
+        <div class="modal fade" id="modalLogin" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" id="modalLoginContent">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h2 class="text-center mt-4 mb-4">Entrar</h2>
+
+                        <form id="formularioLogin">
+                            <!-- Nome -->
+                            <div class="form-outline mb-2">
+                                <label class="form-label mx-1 mt-1" for="lnome">Nome</label>
+                                <input type="text" id="lnome" class="form-control form-control-lg"
+                                    placeholder="Nome" />
+                            </div>
+                        
+                            <!-- Senha -->
+                            <div class="form-outline mb-3">
+                                <label class="form-label mx-1 mt-1" for="lsenha">Senha</label>
+                                <input type="password" id="lsenha" class="form-control form-control-lg" placeholder="Senha" />
+                            </div>
+
+                            <!-- Mostrar Senha -->
+                            <div class="d-flex align-items-center justify-content-start">
+                                <div class="form-check mx-1">
+                                    <input class="form-check-input me-2" type="checkbox" value="" onclick="mostraSenhaLo()"/>
+                                    <label class="form-check-label" for="checkBox">Mostrar senha</label>
+                                </div>
+                            </div>
+                            <p id="lmessage"></p>
+            
+                            <div class="text-center mt-4 pt-2">
+                                <button type="submit" class="btn btn-primary btn-lg w-75 mb-1" id="entrar">Entrar</button>
+                            </div>
+
+                            <div class="d-flex justify-content-center mt-2">
+                                <br>
+                                  <p data-bs-toggle="modal" data-bs-target="#modalCria">
+                                      Não tenho uma conta <a href="#"> Criar conta</a>
+                                  </p>
+                              </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal criar conta -->
+        <div class="modal fade" id="modalCria" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" id="modalLoginContent">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h2 class="text-center mb-2">Criar Conta</h2>
+
+                        <form id="formulario">
+                            <!-- Nome -->
+                            <div class="form-outline mb-2">
+                                <label class="form-label mx-1 mt-1" for="cnome">Nome</label>
+                                <input type="text" id="cnome" class="form-control form-control-lg"
+                                    placeholder="Nome" />
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-outline mb-2">
+                                <label class="form-label mx-1 mt-1" for="cemail">Endereço de Email</label>
+                                <input type="email" id="cemail" class="form-control form-control-lg"
+                                    placeholder="Email" />
+                            </div>
+
+                            <!-- Senha -->
+                            <div class="form-outline mb-2">
+                                <label class="form-label mx-1 mt-1" for="csenha">Senha</label>
+                                <input type="password" id="csenha" class="form-control form-control-lg"
+                                    placeholder="Senha" />
+                            </div>
+
+                            <!--Confirmar Senha -->
+                            <div class="form-outline mb-2">
+                                <label class="form-label mx-1 mt-1" for="confirmaSenha">Confirmar Senha</label>
+                                <input type="password" id="ccsenha" class="form-control form-control-lg"
+                                    placeholder="Confirmar Senha" />
+                            </div>
+
+                            <!-- Mostrar Senha -->
+                            <div class="d-flex align-items-center justify-content-start">
+                                <div class="form-check mx-1">
+                                    <input class="form-check-input me-2" type="checkbox" value="" onclick="mostraSenhaCr()"/>
+                                    <label class="form-check-label" for="checkBox">Mostrar senha</label>
+                                </div>
+                            </div>
+                            <p id="ccmessage"></p>
+
+
+                            <div class="text-center mt-4 pt-2">
+                                <button type="submit" class="btn btn-primary btn-lg w-75 mb-1" id="newAccount">Criar Conta</button>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <br>
+                                <p data-bs-toggle="modal" data-bs-target="#modalLogin">
+                                    Já tenho uma conta <a href="#">Login</a>
+                                </p>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de apresetação -->
+        <div class="container" id="cont">
+            <div class="row align-items-center ">
+                <div class="col-12 col-lg-5 text-center">
+                    <h1 id="textLogo">Markup</h1>
+                </div>
+                <div class="box-bt col-12 col-lg-7 text-center">
+                    <p class="textHome">Uma forma simple e intuitiva de aprender HTML!</p>
+                    <button class="botao" id="comeca" type="button" data-bs-toggle="modal" data-bs-target="#modalCria">CRIAR CONTA</button>
+                    <br>
+                    <button class="botao" id="lgin" type="button" data-bs-toggle="modal" data-bs-target="#modalLogin">LOGIN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apresetação -->
+        <div class="apresentacao">
+            <div class="container">
+
+                <div class="row align-items-center" id="01">
+                    <div class="txt-title">
+                        <h3>O que é Markup?</h3>
+                    </div>
+
+                    <div class="col-12 col-lg-5 text-center">
+                        <img class="img-fluid imgDesc" src="images/01.png">
+                    </div>
+
+                    <div class="box-bt col-12 col-lg-7">
+                        <p id="descricao">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor libero ipsa omnis, suscipit quod alias maxime nulla, ex voluptate quos laboriosam quas ipsam tempore, nihil iusto labore. Sed, adipisci aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae ipsum delectus illum? Deserunt praesentium dolore ea pariatur dolores, est nihil illo error maxime explicabo rem molestiae iste eaque porro! Lorem ipsum dolor sit
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center" id="02">
+                    <div class="txt-title">
+                        <h3>Markup na aprendizagem</h3>
+                    </div>
+                    <div class="box-bt col-12 col-lg-7">
+                        <p id="descricao">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor libero ipsa omnis, suscipit quod alias maxime nulla, ex voluptate quos laboriosam quas ipsam tempore, nihil iusto labore. Sed, adipisci aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae ipsum delectus illum? Deserunt praesentium dolore ea pariatur dolores, est nihil illo error maxime explicabo rem molestiae iste eaque porro! Lorem ipsum dolor sit
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-5 text-center">
+                        <img class="img-fluid imgDesc" src="images/02.png" alt="O que é Markup?">
+                    </div>
+                </div>
+
+                <div class="row align-items-center" id="03">
+                    <div class="txt-title">
+                        <h3>Objetivos do Markup</h3>
+                    </div>
+
+                    <div class="col-12 col-lg-5 text-center">
+                        <img class="img-fluid imgDesc" src="images/03.png">
+                    </div>
+
+                    <div class="box-bt col-12 col-lg-7">
+                        <p id="descricao">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor libero ipsa omnis, suscipit quod alias maxime nulla, ex voluptate quos laboriosam quas ipsam tempore, nihil iusto labore. Sed, adipisci aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae ipsum delectus illum? Deserunt praesentium dolore ea pariatur dolores, est nihil illo error maxime explicabo rem molestiae iste eaque porro! Lorem ipsum dolor sit
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodp">
+        <!-- Rodapé -->
+        <div class="container py-3" id="rodPe">
+            <div class="row my-4 mx-2 mb-5">
+                <!-- E-mail d Incrição -->
+                <div class="col-12 col-md-4 border-right-5 mt-4 mb-3">
+                    <h4>Fique por dentro das novidades</h4>
+                    <p class="secondary-color">
+                      Inscreva-se para saber em primeira mão
+                    </p>
+                    <form>
+                      <div class="mb-3 w-75">
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="Digite o seu e-mail"
+                        />
+                      </div>
+                      <button class="btn btn-light">Inscrever</button>
+                    </form>
+                </div>
+                <!-- Opções de Contato -->
+                <div class="col-12 col-md-4 align-items-center mt-5 mb-5 d-lg-none">
+                    <h4>Formas de contato</h4>
+                    <p class="text-secondary  pt-3">(38) 9999-9999</p>
+                    <p class="text-secondary">Markup@hotmail.com</p>
+                </div>
+                <div class="col-12 col-md-4 align-items-center mt-4 px-4 border border-top-0 border-bottom-0 d-none d-lg-block">
+                    <h4>Formas de contato</h4>
+                    <p class="text-secondary  pt-3">(38) 9999-9999</p>
+                    <p class="text-secondary">Markup@hotmail.com</p>
+                </div>
+                <!-- Redes Sociais-->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center mt-4">
+                    <ul class="nav d-flex justify-content-center align-items-center">
+                        <li class="mx-3 my-2">
+                            <a href="https://www.facebook.com/carloseduardo.santos.94695459" target="_blank">
+                                <i class="fab fa-facebook fa-3x"></i>
+                            </a>
+                        </li>
+                        <li class="mx-3 my-2">
+                            <a href="https://www.instagram.com/khadu.santos" target="_blank">
+                                <i class="fab fa-instagram fa-3x"></i>
+                            </a>
+                        </li>
+                        <li class="mx-3 my-2">
+                            <a href="https://github.com/Kadu-Santos" target="_blank">
+                                <i class="fab fa-github fa-3x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top pt-3"> &copy 2023 Copyright Markup</div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+/*Barra de navegação*/
+
+.img_login{
+    width: 40px;
+    margin: 10px;
+}
+
+.nav-item a{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+header{
+    background-color: rgb(35, 83, 144);
+}
+
+main{
+    font-family: 'Varela Round', sans-serif;
+}
+
+/*Card Nivel*/
+#boxNivel{
+    width: 270px;
+    height: 200px;
+    background-color: rgb(60, 142, 250);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin: 10px;
+}
+
+#boxNivel img{
+    width: 100px;
+}
+
+#boxNivel h2{
+    margin-top: 5px;
+}
+
+
+/*Ajustes para telas Menores*/
+@media screen and (max-width: 1201px){
+    /*Card Nivel*/
+    #boxNivel{
+        width: 216px;
+        height: 160px;
+    }
+
+    #boxNivel img{
+        width: 80px;
+    }
+}
+
+/*Ajustes para telas Menores*/
+@media screen and (max-width: 500px){
+    /*Card Nivel*/
+    #boxNivel{
+        width: 162px;
+        height: 120px;
+    }
+
+    #boxNivel img{
+        width: 60px;
+    }
+}

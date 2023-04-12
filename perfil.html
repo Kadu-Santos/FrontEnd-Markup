@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markup</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style_perfil.css">
+    <script src="js/perfil.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <img class="img_login" src="images/person_circle.svg" alt="logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfil.html">NomeUsuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#02">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#03">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container corpo">
+            <div class="row">
+                <div class="col-12 col-md-6 imgPerfil">
+                    <div class="dadosImg">
+                        <img id="imagem" src="images/big-person_circle.png" alt="">
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            <label for="seletor-imagem" class="custom-button"> Selecione uma imagem</label>
+                            <input type="file" id="seletor-imagem" name="seletor-imagem" class="hidden">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 infos">
+                    <div class="dados">
+                        <h3 id="userName">Nome Usuário</h3>
+                        <div id="nivelUser">
+                            <h2>1</h2>
+                            <h4>Nível</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
+    <footer>
+       
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
